@@ -326,6 +326,23 @@ server:
     tag: # v1.6.1
     imagePullPolicy: # IfNotPresent
 
+  initImage:
+    repository:
+    tag:
+    imagePullPolicy: # IfNotPresent
+    # command:
+    # - "cloudflared tunnel"
+    # - --url=http://127.0.0.1:8080
+    # - --hostname=argocd.wyssmann.dev
+    # - --origincert=/etc/cloudflared/cert.pem
+    # - --no-autoupdate
+    ## Additional volumeMounts to the server init container.
+    volumeMounts: []
+    ## Additional volumes to the server init container.
+    volumes: []
+    ## Additional environment variables to server init container.
+    env: []
+
   ## Additional command line arguments to pass to argocd-server
   ##
   extraArgs: []
